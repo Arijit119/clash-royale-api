@@ -1,0 +1,378 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-shadow: border-box;
+  font-family: 'Baloo Bhai 2';
+}
+
+.btn-nav {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  padding: 2px 25px;
+  margin: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 1.5px solid #839fb7;
+  text-shadow: 1px 1px 2px #000;
+  border-bottom-color: #646a7d;
+  font-family: 'Baloo Bhai 2';
+  background-color: #4c5a6c;
+  opacity: 0.85;
+  background-image: linear-gradient(to bottom, #54667D 70%, #313131 100%);
+  }
+
+.nav-navbar{
+  display: flex;
+  justify-content: center;
+}
+
+#main{
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #858B9C 2%, #5D657B 90%);
+  }
+
+#clan-info{
+  background: #e9f3fd;
+  display: flex;
+  width: 95%;
+  margin: auto;
+  position: relative;
+  bottom: 3px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom:0;
+}
+
+#clanInfo1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  flex-direction: column;
+}
+
+#clanInfo1 h4{
+  margin-top: 10px;
+}
+
+#clanInfo1 span, #ClanScore{
+  padding: 0 15px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 10px;
+  color: #efb3ff;
+  box-shadow: inset 0px 0px 5px 0px #A5B6D4;
+  text-shadow: -0.3px 0.3px 1px #000,0.3px -0.4px 1px #000;
+  background: #A5B6D4;
+  background: linear-gradient(0deg, #A5B6D4 51%, #BFCDE2 53%);
+  font-size: 20px;
+}
+
+#img-div{
+  clip-path: polygon(50% 90%, 100% 100%, 100% 0, 0 0, 0 100%);
+  padding: 5px 8px 10px 8px;
+  background: linear-gradient(#0068a7 30%,#007cc6 60%);
+  z-index: 10;
+  box-shadow: inset 0px 5px 5px #48B9FF,
+              inset 3px 0px 1px #017bc4,
+              inset -3px 0px 1px #017bc4,
+              inset 0px -5px 6px #0068a7,
+                    -2px -2px 3px #000;
+  margin-bottom: 10px;
+}
+
+#clanInfo2{
+  width: 60%;
+}
+
+#clanInfo2 h3{
+  color: white;
+  text-shadow: .3px .3px 1px #000,
+               -.3px -.3px 1px #000;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#clanInfo2 p{
+  color: #677991;
+  text-align: center;
+  font-size: 12px;
+}
+
+#clanInfo3{
+  width: 95%;
+  margin: auto;
+  height: 60px;
+  background: linear-gradient(#006bb1, #4cadfe);
+  position: relative;
+  bottom: 4px;
+  border: 0.5px solid black;
+  border-top-color: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.CInfo3div .p{
+  font-size: 11px;
+  line-height: 12px;
+  color: #bbf5ff;
+  text-align: center;
+  text-shadow: 0.5px 0.5px 1px #000,-0.5px -0.5px 1px #000;
+  letter-spacing: 0px;
+}
+
+.CInfo3div .p2{
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  text-shadow: 0.5px 0.5px 1px #000,-0.5px -0.5px 1px #000;
+  letter-spacing: 0px;
+}
+
+#CInfo3div4 button{
+  background: transparent;
+  border-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+#clanInfo3 main{
+  width: 0.5px;
+  height: 100%;
+  background: #428DD6;
+  box-shadow: -0.5px 0 1px #fff,0.5px 0 1px #060606AD;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: -200%;
+  margin-left: -80px;
+}
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 90%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #e9f3fd transparent transparent transparent;
+}
+
+.popup .show {
+  visibility: visible;
+  box-shadow: 0 0 1px 1px #000;
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+#myPopup{
+  padding: 7px;
+}
+
+.popuptext span{
+  font-size: 14px;
+}
+
+#members{
+  background: #a2b3cf;
+  width: 95%;
+  height: 50%;
+  border-radius: 8px;
+  margin: auto;
+  overflow: auto;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  
+}
+
+#members_info{
+  width: 95%;
+  height: 60px;
+  margin: auto;
+  background: #e8f2fe;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 0.5px solid #fff;
+  position: static;
+}
+
+#members_info div{
+  color: #657992;
+  font-size: 13px;
+  text-align: center;
+  width: 120px;
+  line-height: 20px;
+  margin-top: 8px;
+}
+
+#members_info strong{
+  color: #fff;
+  text-shadow: 0.5px 0.5px 1px #000,-0.5px -0.5px 1px #000;
+  font-size: 20px;
+}
+
+.member1{
+  width: 95%;
+  height: 50px;
+  margin: 5px auto;
+  background: linear-gradient(#d2dff0 50%, #c7d6eb 50%);
+  border: 0.5px solid #000;
+  border-radius: 8px;
+  box-shadow: inset 0px -0.5px 1px #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.number{
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background: #697c9a;
+  margin-left: 7px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number div{
+  width: 30px;
+  height: 31px;
+  background: linear-gradient(#9cb0c8 50%, #a0b5cb 50%);
+  border-radius: 7px;
+  box-shadow: inset 0 0 0px 3px #c0d4ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 0.5px 0.5px 1px #000, -0.5px -0.5px 1px #000;
+}
+
+.people_png img{
+  position: relative;
+  top: 12px;
+  left: 5px;
+}
+
+.member_name span span{
+  font-size: 12px;
+  margin-left: 10px;
+  position: relative; 
+  top: 5px;
+  color: #fff;
+  text-shadow: 0.5px 0.5px 1px #000,-0.5px -0.5px 1px #000;
+}
+
+.member_name span small{
+  color: #6f84a3;
+  position: relative;
+  bottom: 5px;
+  text-align: center;
+  margin-left:10px;
+  letter-spacing: -0.5px; 
+}
+
+.arena_png{
+  margin: 4px; 
+  position: relative;
+  top: 3px;
+}
+
+.donation div img{
+  position: relative;
+  top: 10px;
+  left: -2px;
+}
+
+.donation span{
+  width: 100%;
+  font-size: 12px;
+  color: #fff;
+  text-shadow: 0.5px 0.5px 1px #000, -0.5px -0.5px 1px #000;
+ text-align: center;
+ margin-left: 2px;
+ position: relative;
+ bottom: 2px;
+}
+
+.trophy{
+  display: flex;
+}
+
+.trophy div{
+  width: 52px;
+  height: 30px;
+  border-radius: 5px;
+  background: linear-gradient(#a1b1c8 50%,#8d9eb8 50%);
+  box-shadow: inset 1px 1px 2px #8d9eb8;
+  margin: 0 7px 0 14px;
+  white-space: nowrap;
+}
+
+.trophy div img{
+  position: relative;
+  right: 13px;
+  top: 1px;
+}
+
+.trophy div span{
+  position: relative;
+  bottom: 10px;
+  right: 15px;
+  color: #fff;
+  text-shadow: 0.5px 0.5px 1px #000, -0.5px -0.5px 1px #000;
+  font-size: 14px;
+}
+
+.LastOnlineTime{
+    font-size: 8px;
+    color: #a5680e;
+    white-space: nowrap;
+    background: linear-gradient(#f0c935,#f3c737,#f0c935);
+    border-radius: 6px;
+    border: 2px solid #a1882c;
+    box-shadow: inset 0 0 px 1px #f7db48;
+    padding: 0 3px;
+    position: relative;
+    bottom: 13px;
+    left: 5px;
+    width: 26px;
+    height: 12px;
+    text-align: center;
+    text-transform: capitalize; 
+} 
