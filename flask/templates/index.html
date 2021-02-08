@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="static/css/main.css" type="text/css" media="all" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap" rel="stylesheet">
+  <title>clash Emperors</title>
+</head>
+
+<body>
+  <section id="main"><br>
+    <nav class="nav-navbar">
+      <span>
+        <button class="btn-nav" id="btn-nav-clan">clan</button>
+
+      </span>
+    </nav>
+    <div id="clan-info">
+      <br>
+      <div id="clanInfo1">
+        <div id="img-div">
+          <img src="static/assets/img/A_Char_King_03.png" height="50" width="50">
+        </div>
+        <h4>
+          <img src="static/assets/img/cw-trophy.png" height="25" height="25" />
+          <span>{{data['clanWarTrophies']}}</span>
+        </h4>
+      </div>
+      <div id="clanInfo2">
+        <h3>Clash Emperors</h3>
+        <p>{{data['description']}}</p>
+      </div>
+    </div>
+    <div id="clanInfo3">
+      <div id="CInfo3div1" class="CInfo3div">
+        <p class="p">LOCATION</p>
+        <p class="p2" style="font-size: 13px">{{data['location']['name']}}</p>
+      </div>
+      <main></main>
+      <div id="CInfo3div2" class="CInfo3div">
+        <p class="p">REQUIRED<br>TROPHIES</p>
+        <p class="p2">{{data['requiredTrophies']}}</p>
+      </div>
+      <main></main>
+      <div id="CInfo3div3" class="CInfo3div">
+        <p class="p">DONATIONS<br>WEEKLY</p>
+        <p class="p2">{{data['donationsPerWeek']}}</p>
+      </div>
+      <main></main>
+      <div id="CInfo3div4" class="CInfo3div">
+        <div class="popup" onclick="myFunction()"><img height="35" width="50" src="static/assets/img/c-info-icon.png" />
+          <span class="popuptext" id="myPopup">
+            <div style="display:flex;justify-content: space-between">
+              <span style="color: #808f9e;margin: 5px 5px 5px 5px">
+                Clan Score:
+              </span>
+              <span id="ClanScore" style="color: #fff;position: relative;top: 0.5px;left: -5px;margin: 5px 0">
+                {{data['clanScore']}}
+              </span>
+            </div>
+            <hr style="width: 90%;margin: auto">
+            <div style="display:flex;justify-content: space-between">
+              <span style="color: #808f9e;margin: 5px">
+                Type:
+              </span>
+              <span id="ClanScore" style="color: #fff;position: relative;top: 0.5px;left: -5px;margin: 5px 0;">
+                {{data['type']}}
+              </span>
+            </div>
+            <hr style="width: 90%;margin: auto">
+            <div style="display:flex;justify-content: space-between">
+              <span style="color: #808f9e;margin: 5px">
+                Clan tag:
+              </span>
+              <span id="ClanScore" style="color: #fff;position: relative;top: 0.5px;left: -5px;margin: 5px 0;background: #404a56">
+                {{data['tag']}}
+              </span>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div id="members_info">
+      <div>
+        MEMBERS<br><strong>{{data['members']}}/50</strong>
+      </div>
+    </div>
+    
+    <div id="members">
+        {% for name in mArrey %}
+      <div class="member1">
+          <div class="number">
+            <div>
+              {{name['clanRank'] }}
+            </div>
+          </div>
+          <div class="people_png">
+            <img width="35" height="35" src="static/assets/img/people.png" /><br>
+            <div>
+                <div class="LastOnlineTime">
+                online
+               </div>
+            </div>
+          </div>
+          <div class="member_name">
+            <span>
+              <span style="white-space: nowrap">{{ name['name'] }} </span><br>
+              <small>{{ name['role'] }}</small>
+            </span>
+          </div>
+        
+        <div class="arena_png">
+          <img class="arenaImg" width="34" height="40" src="static/assets/arena/Barbarian_Bowl.png"/>
+        </div>
+        
+        <div class="donation">
+          <div>
+            <img src="static/assets/img/donation.png" width="25" height="25"/>
+          </div>
+          <span>
+            {{ name['donations'] }}
+          </span>
+        </div>
+        
+        <div class="trophy">
+          <div>
+            <img src="static/assets/img/trophy.png" width="28" height="28">
+            <span>
+              {{ name['trophies'] }}
+            </span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      
+    </div>
+    
+    <embed src="static/assets/sounds/Clash-Royale_Soundtrack_Menu_A.mp3" loop="true" autostart="true" width="0" height="0">
+  </section>
+  
+<audio id="myAudio">
+  <source src="static/assets/sounds/button_click.ogg" type="audio/ogg">
+  <source src="static/assets/sounds/button_click.mp3" type="audio/mpeg">
+</audio>
+  
+  <script src="static/js/main.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+    let dayArr = {{ dayArr }}
+    let H_arr = {{ H_arr }}
+    let M_arr = {{ M_arr }}
+    
+    let LastOnlineTime = document.querySelectorAll('.LastOnlineTime');
+
+for (let i = 0; i < dayArr.length; i++) {
+    let Minutes = M_arr[i]
+      if (Minutes === 0) {
+        Minutes = "";
+      } else {
+        Minutes = M_arr[i] + "m ";
+      }
+    
+      let day = dayArr[i]
+      if (day === 0) {
+        day = ""
+      } else {
+        day = dayArr[i] + "d "
+      }
+      let Hour = H_arr[i]
+      if (Hour === 0) {
+        Hour = Minutes;
+      } else {
+        Hour = H_arr[i] + "h "
+      }
+      LastOnlineTime[i].innerHTML = `${day}${Hour}`;
+    }
+  </script>
+  
+</body>
+</html>
